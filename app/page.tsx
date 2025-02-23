@@ -2,11 +2,11 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { FaHome } from "react-icons/fa";
 import { navItems } from "@/data";
-import { ClientPageRoot } from "next/dist/client/components/client-page";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
+import WeeklyLogs from "@/components/WeeklyLogs";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +18,8 @@ export default function Home() {
         <RecentProjects />
         <Clients />
         <Experience />
+        <WeeklyLogs />
+        <Footer />
         <footer />
       </div>
     </main>

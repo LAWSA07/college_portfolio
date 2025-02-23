@@ -1,7 +1,7 @@
 import { weeklyLogs } from "@/data/logs";
 import { LogCard } from "@/components/logs/LogCard";
 import MagicButton from "@/components/ui/MagicButton";
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function LogsPage() {

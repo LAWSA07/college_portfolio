@@ -55,3 +55,9 @@ next-env.d.ts
    # Ignore specific files
    app/global-error.tsx
    app/sentry-example-page/page.tsx
+# next-video
+videos/*
+!videos/*.json
+!videos/*.js
+!videos/*.ts
+public/_next-video

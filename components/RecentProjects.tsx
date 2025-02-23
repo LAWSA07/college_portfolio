@@ -1,13 +1,7 @@
 "use client";
-// Add at the top with other imports
-import { FaClock } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
-import { link } from "fs";
-import { FaBookOpen } from "react-icons/fa";
-import MagicButton from "./ui/MagicButton";
 
 const RecentProjects = () => {
   return (
@@ -22,7 +16,8 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             key={item.id}
           >
-            <PinContainer title={item.title} href={item.href}>
+            {/* Remove href from PinContainer */}
+            <PinContainer title={item.title}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -66,24 +61,20 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                {/* Change anchor to button with click handler */}
+                <button
+                  onClick={() => window.open(item.href, "_blank")}
+                  className="flex items-center gap-2 text-purple hover:text-purple-300 transition-colors"
+                >
+                  <p className="lg:text-xl md:text-xs text-sm">
                     Check Live Site
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
+                </button>
               </div>
             </PinContainer>
           </div>
         ))}
-      </div>
-      <div className="w-full flex justify-center mt-12">
-        <MagicButton
-          title="View All Logs"
-          icon={<FaClock />}
-          position="right"
-          link="/logs"
-        />
       </div>
     </div>
   );

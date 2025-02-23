@@ -205,6 +205,7 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    links: "https://github.com/LAWSA07",
     img: "/git.svg",
   },
   {
@@ -214,5 +215,29 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+  },
+];
+
+export const weeklyLogs = [
+  {
+    id: 1,
+    title: "Week 1: Introduction",
+    desc: "sir told us about the basic structure of self introduction while applying for prestige companies",
+    videoFileName: "videoplayback.mp4",
+    links: [{ name: "Notes", url: "https://github.com/example1" }],
+  },
+  {
+    id: 2,
+    title: "Week 2: Resume structure:",
+    desc: "Add meaningful objective behind everything one example sir gave why we will add family in introduction to add meaning in it.",
+    video: "https://www.youtube.com/watch?v=example2",
+    links: [{ name: "Notes", url: "https://github.com/example2" }],
+  },
+  {
+    id: 3,
+    title: "Week 3: crisp opportunities",
+    desc: "sir told us about what companies wants from you and whatever they asks it should be clean and descriptive.",
+    video: "https://www.youtube.com/watch?v=example3",
+    links: [{ name: "Notes", url: "https://research.example3.com" }],
   },
 ];
