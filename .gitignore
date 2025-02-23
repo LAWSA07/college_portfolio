@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+   # Ignore node_modules directory
+   node_modules/
+
+   # Ignore build directory
+   build/
+
+   # Ignore log files
+   *.log
+
+   # Ignore specific files
+   app/global-error.tsx
+   app/sentry-example-page/page.tsx
