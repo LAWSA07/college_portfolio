@@ -2,6 +2,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -16,19 +17,26 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             key={item.id}
           >
-            {/* Remove href from PinContainer */}
             <PinContainer title={item.title}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image
+                    src="/bg.png"
+                    alt="bgimg"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  width={800}
+                  height={600}
+                  className="z-10 absolute bottom-0 w-full h-full object-cover"
                 />
               </div>
 
@@ -48,7 +56,7 @@ const RecentProjects = () => {
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item.iconLists.map((icon: string, index: number) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
@@ -56,12 +64,17 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Image
+                        src={icon}
+                        alt="icon"
+                        width={20}
+                        height={20}
+                        className="p-2"
+                      />
                     </div>
                   ))}
                 </div>
 
-                {/* Change anchor to button with click handler */}
                 <button
                   onClick={() => window.open(item.href, "_blank")}
                   className="flex items-center gap-2 text-purple hover:text-purple-300 transition-colors"
